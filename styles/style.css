@@ -11,7 +11,6 @@ body {
 	height: 100vh;
 	width: 100%;
 	background-color: #333333;
-	background-image: url("/images/pexels-photo-4319879.jpeg");
 	background-repeat: no-repeat;
 	background-position: bottom;
 	object-fit: contain;
@@ -49,7 +48,10 @@ body {
 .weather__main {
 	display: flex;
 	flex-direction: column;
-	gap: 5px;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	gap: 15px;
 }
 .weather__city {
 }
@@ -57,7 +59,9 @@ body {
 }
 .weather__icon {
 	display: flex;
-	align-items: baseline;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
 }
 .weather__temp {
 }
@@ -85,7 +89,6 @@ body {
 	width: 80%;
 	height: 50px;
 	transition: all 0.3s ease 0s;
-	font-weight: bold;
 }
 .cityInput:hover {
 	transition: all 0.3s ease 0s;

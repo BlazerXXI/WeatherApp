@@ -33,7 +33,7 @@ async function loadWeather() {
 		const responseResult = await response.json();
 		getWeather(responseResult);
 	} catch (error) {
-		weatherBlock.innerHTML = "Введіть назву міста";
+		weatherBlock.innerHTML = "Enter city";
 	}
 	localStorage.setItem("city", city);
 }
@@ -46,15 +46,29 @@ getWeather = (data) => {
 	const feelsLike = Math.round(data.main.feels_like);
 	const weatherStatus = data.weather[0].main;
 	const weatherIcon = data.weather[0].icon;
+	const locationCountry = data.sys.country;
+
+	console.log(weatherStatus);
+
+	if (weatherStatus == "Clear") {
+		document.body.style.backgroundImage = "url('/images/sun.jpeg')";
+	} else if (weatherStatus == "Clouds") {
+		document.body.style.backgroundImage = "url('/images/clouds.webp')";
+	} else if (weatherStatus == "Rain") {
+		document.body.style.backgroundImage = "url('/images/rain-d.jpg')";
+	} else if (weatherStatus == "Haze") {
+		document.body.style.backgroundImage = "url('/images/Haze.png')";
+	}
 
 	const template = `
 	<div class="weather__header">
 	<div class="weather__main">
+	<div class="weather__city">${locationCountry}</div>
 	<div class="weather__city">${location}</div>
-	<div class="weather__status">${weatherStatus}</div>
 	<div class="weather__icon">
-	</div>
+	<div class="weather__status">${weatherStatus}</div>
 	<img src="https://openweathermap.org/img/w/${weatherIcon}.png" alt="${weatherStatus}" />
+	</div>
 	</div>
 	</div>
 	<div class="weather__temp">${temp}</div>

@@ -14,7 +14,6 @@ async function loadWeather() {
 	cityInput.addEventListener("input", () => {
 		const newCity = cityInput.value;
 		city = newCity;
-		loadWeather();
 		if (newCity.trim() === "") {
 			return;
 		}

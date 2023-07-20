@@ -3,7 +3,7 @@ const weatherBlock = document.querySelector("#weather");
 async function loadWeather() {
 	weatherBlock.innerHTML = `
 	<div class="weather__loading">
-	<img src="../images/loading-gif.gif" alt="loading..." />
+	<img src="./images/loading-gif.gif" alt="loading..." />
 	</div>
 	`;
 
@@ -47,13 +47,13 @@ getWeather = (data) => {
 	const locationCountry = data.sys.country;
 
 	if (weatherStatus == "Clear") {
-		document.body.style.backgroundImage = "url('/images/sun.jpeg')";
+		document.body.style.backgroundImage = "url('./images/sun.jpeg')";
 	} else if (weatherStatus == "Clouds") {
-		document.body.style.backgroundImage = "url('/images/clouds.webp')";
+		document.body.style.backgroundImage = "url('./images/clouds.webp')";
 	} else if (weatherStatus == "Rain") {
-		document.body.style.backgroundImage = "url('/images/rain-d.jpg')";
+		document.body.style.backgroundImage = "url('./images/rain-d.jpg')";
 	} else if (weatherStatus == "Haze") {
-		document.body.style.backgroundImage = "url('/images/Haze.png')";
+		document.body.style.backgroundImage = "url('./images/Haze.png')";
 	}
 
 	const template = `

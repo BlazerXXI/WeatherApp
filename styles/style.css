@@ -1,66 +1,115 @@
 body,
 html {
-  box-sizing: border-box;
-  font-size: 21px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: 500;
-  color: #ffffff;
+	box-sizing: border-box;
+	font-size: 21px;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+	font-weight: 500;
+	color: #ffffff;
 }
 body {
-  height: 98vh;
-  background-color: #333333;
+	height: 100vh;
+	background-color: #333333;
+	background-image: url("https://png.pngtree.com/background/20210709/original/pngtree-simple-moire-flower-background-design-picture-image_907672.jpg");
 }
 
 [class*="_temp"] {
-  font-size: 18px;
-  color: #ffffffd6;
+	font-size: 18px;
+	color: #ffffffd6;
 }
 
 .wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  max-width: 1200px;
-  margin: 0px auto;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	max-width: 1200px;
+	margin: 0px auto;
 }
 .weather {
-  padding: 25px 35px;
-  background-color: #00000040;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+	padding: 25px 35px;
+	background-color: #00000040;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 15px;
 }
 .weather__header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 .weather__main {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
 }
 .weather__city {
 }
 .weather__status {
 }
 .weather__icon {
-  display: flex;
-  align-items: baseline;
+	display: flex;
+	align-items: baseline;
 }
 .weather__temp {
 }
 .weather__temp::after {
-  content: " °C";
+	content: " °C";
 }
 .weather__feels-like {
 }
 .weather__feels-like::after {
-  content: " °C";
+	content: " °C";
+}
+.box-city {
+	width: 100%;
 }
 .cityInput {
-	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 0px auto;
+	margin-top: 30px;
+	background-color: #5f5e5e;
+	color: white;
+	width: 80%;
+	height: 50px;
+	transition: all 0.3s ease 0s;
+}
+.cityInput:hover {
+	transition: all 0.3s ease 0s;
+	opacity: 0.8;
+	transform: scale(1.02);
+}
+.cityInput:active {
+	transition: all 0.3s ease 0s;
+	opacity: 0.6;
+	transform: scale(0.9);
+}
+.submitBtn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin: 0px auto;
+	margin-top: 30px;
+	cursor: pointer;
+	width: 80%;
+	height: 30px;
+	background-color: #00000080;
+	color: white;
+	transition: all 0.3s ease 0s;
+}
+.submitBtn:hover {
+	transition: all 0.3s ease 0s;
+	opacity: 0.8;
+	transform: scale(1.02);
+}
+.submitBtn:active {
+	transition: all 0.3s ease 0s;
+	opacity: 0.6;
+	transform: scale(0.9);
 }

@@ -39,16 +39,12 @@ async function loadWeather() {
 }
 
 getWeather = (data) => {
-	console.log(data);
-
 	const location = data.name;
 	const temp = Math.round(data.main.temp);
 	const feelsLike = Math.round(data.main.feels_like);
 	const weatherStatus = data.weather[0].main;
 	const weatherIcon = data.weather[0].icon;
 	const locationCountry = data.sys.country;
-
-	console.log(weatherStatus);
 
 	if (weatherStatus == "Clear") {
 		document.body.style.backgroundImage = "url('/images/sun.jpeg')";
@@ -58,8 +54,6 @@ getWeather = (data) => {
 		document.body.style.backgroundImage = "url('/images/rain-d.jpg')";
 	} else if (weatherStatus == "Haze") {
 		document.body.style.backgroundImage = "url('/images/Haze.png')";
-	} else {
-		document.body.style.backgroundImage = "url('/images/clouds.webp')";
 	}
 
 	const template = `

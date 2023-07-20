@@ -8,7 +8,7 @@ async function loadWeather() {
 	`;
 
 	const cityInput = document.querySelector("#cityInput");
-	const apiKey = "c655347ed896a2d5bcc7f31ba5cd09d1";
+	const apiKey = "108cd6e86818647f4c9d5af62b5fe464";
 	let city = cityInput.value;
 
 	cityInput.addEventListener("input", () => {

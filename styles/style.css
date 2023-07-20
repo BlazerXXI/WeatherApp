@@ -11,6 +11,9 @@ body {
 	height: 100vh;
 	background-color: #333333;
 	background-image: url("https://png.pngtree.com/background/20210709/original/pngtree-simple-moire-flower-background-design-picture-image_907672.jpg");
+	background-repeat: none;
+	background-position: center;
+	object-fit: contain;
 }
 
 [class*="_temp"] {

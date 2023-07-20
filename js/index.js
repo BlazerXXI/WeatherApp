@@ -1,5 +1,3 @@
-"use srtict";
-
 const weatherBlock = document.querySelector("#weather");
 
 async function loadWeather() {
@@ -10,8 +8,8 @@ async function loadWeather() {
 	`;
 
 	const cityInput = document.querySelector("#cityInput");
-	const apiKey = "573b5b9bc37c7923940895f646152395";
-	const city = cityInput.value;
+	const apiKey = "c655347ed896a2d5bcc7f31ba5cd09d1";
+	let city = cityInput.value;
 
 	cityInput.addEventListener("input", () => {
 		const newCity = cityInput.value;
@@ -26,17 +24,19 @@ async function loadWeather() {
 			loadWeather();
 		}
 	});
-
 	const server = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=${city}&appid=${apiKey}`;
 
-	const response = await fetch(server, {
-		method: "GET",
-	});
-	const responseResult = await response.json();
-
-	response.ok
-		? getWeather(responseResult)
-		: (weatherBlock.innerHTML = "Введіть назву міста");
+	try {
+		const response = await fetch(server);
+		if (!response.ok) {
+			throw new Error("Unable to fetch weather data");
+		}
+		const responseResult = await response.json();
+		getWeather(responseResult);
+	} catch (error) {
+		weatherBlock.innerHTML = "Введіть назву міста";
+	}
+	localStorage.setItem("city", city);
 }
 
 getWeather = (data) => {
@@ -65,6 +65,10 @@ getWeather = (data) => {
 };
 
 if (weatherBlock) {
+	const savedCity = localStorage.getItem("city");
+	if (savedCity) {
+		cityInput.value = savedCity;
+	}
 	loadWeather();
 }
 

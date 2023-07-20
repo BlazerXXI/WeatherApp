@@ -9,11 +9,14 @@ html {
 }
 body {
 	height: 100vh;
+	width: 100%;
 	background-color: #333333;
-	background-image: url("https://png.pngtree.com/background/20210709/original/pngtree-simple-moire-flower-background-design-picture-image_907672.jpg");
-	background-repeat: none;
-	background-position: center;
+	background-image: url("/images/pexels-photo-4319879.jpeg");
+	background-repeat: no-repeat;
+	background-position: bottom;
 	object-fit: contain;
+	margin: 0;
+	padding: 0;
 }
 
 [class*="_temp"] {
@@ -74,13 +77,15 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	text-align: center;
 	margin: 0px auto;
 	margin-top: 30px;
-	background-color: #5f5e5e;
-	color: white;
+	background-color: #5f5e5e99;
+	color: #ffffff;
 	width: 80%;
 	height: 50px;
 	transition: all 0.3s ease 0s;
+	font-weight: bold;
 }
 .cityInput:hover {
 	transition: all 0.3s ease 0s;

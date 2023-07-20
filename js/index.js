@@ -58,6 +58,8 @@ getWeather = (data) => {
 		document.body.style.backgroundImage = "url('/images/rain-d.jpg')";
 	} else if (weatherStatus == "Haze") {
 		document.body.style.backgroundImage = "url('/images/Haze.png')";
+	} else {
+		document.body.style.backgroundImage = "url('/images/clouds.webp')";
 	}
 
 	const template = `

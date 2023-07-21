@@ -89,3 +89,12 @@ submitBtn.addEventListener("click", () => {
 		loadWeather(city);
 	}
 });
+
+// clearButton
+const clearButton = document.querySelector("#clearButton");
+
+clearButton.addEventListener("click", function () {
+	weatherBlock.innerHTML = "Enter city";
+	cityInput.value = "";
+	cityInput.focus();
+});

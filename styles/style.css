@@ -10,7 +10,7 @@ html {
 body {
 	height: 100vh;
 	width: 100%;
-	background-color: #333333;
+	background-color: #4c5862;
 	background-repeat: no-repeat;
 	background-position: bottom;
 	object-fit: contain;
@@ -76,6 +76,10 @@ body {
 .box-city {
 	width: 100%;
 }
+.input-block {
+	position: relative;
+	display: block;
+}
 .cityInput {
 	display: flex;
 	flex-direction: column;
@@ -123,4 +127,16 @@ body {
 	transition: all 0.3s ease 0s;
 	opacity: 0.6;
 	transform: scale(0.9);
+}
+.clearButton {
+	position: absolute;
+	right: 15%;
+	top: 50%;
+	transform: translateY(-50%);
+	display: block;
+	padding: 4px 7px;
+	font-size: small;
+	line-height: normal;
+	text-decoration: none;
+	cursor: pointer;
 }

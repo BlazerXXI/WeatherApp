@@ -46,6 +46,8 @@ getWeather = (data) => {
 	const weatherIcon = data.weather[0].icon;
 	const locationCountry = data.sys.country;
 
+	const pc = window.innerWidth > 768;
+
 	if (weatherStatus == "Clear") {
 		document.body.style.backgroundImage = "url('./images/sun.jpeg')";
 	} else if (weatherStatus == "Clouds") {

@@ -96,5 +96,6 @@ const clearButton = document.querySelector("#clearButton");
 clearButton.addEventListener("click", function () {
 	weatherBlock.innerHTML = "Enter city";
 	cityInput.value = "";
+	localStorage.setItem("city", cityInput.value);
 	cityInput.focus();
 });
